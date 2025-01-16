@@ -1,6 +1,6 @@
 /*******************************************************************************************
 *
-*   raylib [shapes] example - Rectangle advanced
+*   raylib [shapes] example - rayRectangle advanced
 *
 *   Example originally created with raylib 5.5, last time updated with raylib 5.5
 *
@@ -18,7 +18,7 @@
 #include <math.h>
 
 // Draw rectangle with rounded edges and horizontal gradient, with options to choose side of roundness
-static void DrawRectangleRoundedGradientH(Rectangle rec, float roundnessLeft, float roundnessRight, int segments, Color left, Color right);
+static void DrawRectangleRoundedGradientH(rayRectangle rec, float roundnessLeft, float roundnessRight, int segments, Color left, Color right);
 
 //------------------------------------------------------------------------------------
 // Program main entry point
@@ -41,7 +41,7 @@ int main(void)
         // Update rectangle bounds
         //----------------------------------------------------------------------------------
         float width = GetScreenWidth()/2.0f, height = GetScreenHeight()/6.0f;
-        Rectangle rec = {
+        rayRectangle rec = {
             GetScreenWidth() / 2.0f - width/2,
             GetScreenHeight() / 2.0f - 5*(height/2),
             width, height
@@ -81,7 +81,7 @@ int main(void)
 
 // Draw rectangle with rounded edges and horizontal gradient, with options to choose side of roundness
 // NOTE: Adapted from both 'DrawRectangleRounded()' and 'DrawRectangleGradientH()' raylib [rshapes] implementations
-static void DrawRectangleRoundedGradientH(Rectangle rec, float roundnessLeft, float roundnessRight, int segments, Color left, Color right)
+static void DrawRectangleRoundedGradientH(rayRectangle rec, float roundnessLeft, float roundnessRight, int segments, Color left, Color right)
 {
     // Neither side is rounded
     if ((roundnessLeft <= 0.0f && roundnessRight <= 0.0f) || (rec.width < 1) || (rec.height < 1 ))
@@ -140,7 +140,7 @@ static void DrawRectangleRoundedGradientH(Rectangle rec, float roundnessLeft, fl
 
 #if defined(SUPPORT_QUADS_DRAW_MODE)
     rlSetTexture(GetShapesTexture().id);
-    Rectangle shapeRect = GetShapesTextureRectangle();
+    rayRectangle shapeRect = GetShapesTextureRectangle();
 
     rlBegin(RL_QUADS);
         // Draw all the 4 corners: [1] Upper Left Corner, [3] Upper Right Corner, [5] Lower Right Corner, [7] Lower Left Corner
@@ -194,7 +194,7 @@ static void DrawRectangleRoundedGradientH(Rectangle rec, float roundnessLeft, fl
         // By choosing the color correctly associated with a pointe the gradient effect 
         // will naturally come from OpenGL interpolation
 
-        // [2] Upper Rectangle
+        // [2] Upper rayRectangle
         rlColor4ub(left.r, left.g, left.b, left.a);
         rlTexCoord2f(shapeRect.x/texShapes.width, shapeRect.y/texShapes.height);
         rlVertex2f(point[0].x, point[0].y);
@@ -209,7 +209,7 @@ static void DrawRectangleRoundedGradientH(Rectangle rec, float roundnessLeft, fl
         rlTexCoord2f((shapeRect.x + shapeRect.width)/texShapes.width, shapeRect.y/texShapes.height);
         rlVertex2f(point[1].x, point[1].y);
 
-        // [4] Left Rectangle
+        // [4] Left rayRectangle
         rlColor4ub(right.r, right.g, right.b, right.a);
         rlTexCoord2f(shapeRect.x/texShapes.width, shapeRect.y/texShapes.height);
         rlVertex2f(point[2].x, point[2].y);
@@ -220,7 +220,7 @@ static void DrawRectangleRoundedGradientH(Rectangle rec, float roundnessLeft, fl
         rlTexCoord2f((shapeRect.x + shapeRect.width)/texShapes.width, shapeRect.y/texShapes.height);
         rlVertex2f(point[3].x, point[3].y);
 
-        // [6] Bottom Rectangle
+        // [6] Bottom rayRectangle
         rlColor4ub(left.r, left.g, left.b, left.a);
         rlTexCoord2f(shapeRect.x/texShapes.width, shapeRect.y/texShapes.height);
         rlVertex2f(point[11].x, point[11].y);
@@ -233,7 +233,7 @@ static void DrawRectangleRoundedGradientH(Rectangle rec, float roundnessLeft, fl
         rlTexCoord2f((shapeRect.x + shapeRect.width)/texShapes.width, shapeRect.y/texShapes.height);
         rlVertex2f(point[10].x, point[10].y);
 
-        // [8] left Rectangle
+        // [8] left rayRectangle
         rlColor4ub(left.r, left.g, left.b, left.a);
         rlTexCoord2f(shapeRect.x/texShapes.width, shapeRect.y/texShapes.height);
         rlVertex2f(point[7].x, point[7].y);
@@ -244,7 +244,7 @@ static void DrawRectangleRoundedGradientH(Rectangle rec, float roundnessLeft, fl
         rlTexCoord2f((shapeRect.x + shapeRect.width)/texShapes.width, shapeRect.y/texShapes.height);
         rlVertex2f(point[8].x, point[8].y);
 
-        // [9] Middle Rectangle
+        // [9] Middle rayRectangle
         rlColor4ub(left.r, left.g, left.b, left.a);
         rlTexCoord2f(shapeRect.x/texShapes.width, shapeRect.y/texShapes.height);
         rlVertex2f(point[8].x, point[8].y);
@@ -290,7 +290,7 @@ static void DrawRectangleRoundedGradientH(Rectangle rec, float roundnessLeft, fl
             }
         }
 
-        // [2] Upper Rectangle
+        // [2] Upper rayRectangle
         rlColor4ub(left.r, left.g, left.b, left.a);
         rlVertex2f(point[0].x, point[0].y);
         rlVertex2f(point[8].x, point[8].y);
@@ -302,7 +302,7 @@ static void DrawRectangleRoundedGradientH(Rectangle rec, float roundnessLeft, fl
         rlColor4ub(right.r, right.g, right.b, right.a);
         rlVertex2f(point[9].x, point[9].y);
 
-        // [4] Right Rectangle
+        // [4] Right rayRectangle
         rlColor4ub(right.r, right.g, right.b, right.a);
         rlVertex2f(point[9].x, point[9].y);
         rlVertex2f(point[10].x, point[10].y);
@@ -311,7 +311,7 @@ static void DrawRectangleRoundedGradientH(Rectangle rec, float roundnessLeft, fl
         rlVertex2f(point[9].x, point[9].y);
         rlVertex2f(point[3].x, point[3].y);
 
-        // [6] Bottom Rectangle
+        // [6] Bottom rayRectangle
         rlColor4ub(left.r, left.g, left.b, left.a);
         rlVertex2f(point[11].x, point[11].y);
         rlVertex2f(point[5].x, point[5].y);
@@ -323,7 +323,7 @@ static void DrawRectangleRoundedGradientH(Rectangle rec, float roundnessLeft, fl
         rlColor4ub(right.r, right.g, right.b, right.a);
         rlVertex2f(point[4].x, point[4].y);
 
-        // [8] Left Rectangle
+        // [8] Left rayRectangle
         rlColor4ub(left.r, left.g, left.b, left.a);
         rlVertex2f(point[7].x, point[7].y);
         rlVertex2f(point[6].x, point[6].y);
@@ -332,7 +332,7 @@ static void DrawRectangleRoundedGradientH(Rectangle rec, float roundnessLeft, fl
         rlVertex2f(point[7].x, point[7].y);
         rlVertex2f(point[11].x, point[11].y);
 
-        // [9] Middle Rectangle
+        // [9] Middle rayRectangle
         rlColor4ub(left.r, left.g, left.b, left.a);
         rlVertex2f(point[8].x, point[8].y);
         rlVertex2f(point[11].x, point[11].y);

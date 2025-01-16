@@ -20,7 +20,7 @@
 
 typedef struct ColorRect {
     Color c;
-    Rectangle r;
+    rayRectangle r;
 } ColorRect;
 
 //------------------------------------------------------------------------------------
@@ -138,7 +138,7 @@ static ColorRect *GenerateRandomColorRectSequence(float rectCount, float rectWid
         int rectHeight = (int)Remap((float)seq[i], 0, rectCount - 1, 0, screenHeight);
         
         rectangles[i].c = GenerateRandomColor();
-        rectangles[i].r = CLITERAL(Rectangle){ startX + i*rectWidth, screenHeight - rectHeight, rectWidth, (float)rectHeight };
+        rectangles[i].r = CLITERAL(rayRectangle){startX + i * rectWidth, screenHeight - rectHeight, rectWidth, (float)rectHeight };
     }
     
     UnloadRandomSequence(seq);

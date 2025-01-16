@@ -1881,7 +1881,7 @@ Detailed changes:
 [core] RENAMED: struct Camera to Camera3D
 [core] RENAMED: struct SpriteFont to Font -> plus all required functions!
 [core] RENAMED: enum TextureFormat to PixelFormat
-[core] REVIEWED: Rectangle params int to float
+[core] REVIEWED: rayRectangle params int to float
 [core] REVIEWED: timing system for macOS
 [core] REMOVED: ColorToFloat()
 [core] ADDED: GetCurrentTime() on macOS
@@ -2369,7 +2369,7 @@ other changes:
 [textures] Added function ImageConvertFormat()
 [textures] Added function GenTextureMipmaps()
 [text] Added support for Latin-1 Extended characters for default font
-[text] Redesigned SpriteFont struct, replaced Character struct by Rectangle
+[text] Redesigned SpriteFont struct, replaced Character struct by rayRectangle
 [text] Removed function GetFontBaseSize(), use directly spriteFont.size
 [models] Review of struct: Model (added shaders support)
 [models] Added 3d collision functions (sphere vs sphere vs box vs box)

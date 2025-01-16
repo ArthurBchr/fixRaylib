@@ -29,7 +29,7 @@ typedef struct Player {
 } Player;
 
 typedef struct EnvElement {
-    Rectangle rect;
+    rayRectangle rect;
     int blocking;
     Color color;
 } EnvElement;
@@ -288,7 +288,7 @@ int main(void)
                 }
 
                 // Draw player rectangle
-                DrawRectangleRec((Rectangle){ player.position.x - 20, player.position.y - 40, 40, 40 }, RED);
+                DrawRectangleRec((rayRectangle){player.position.x - 20, player.position.y - 40, 40, 40 }, RED);
 
             EndMode2D();
             

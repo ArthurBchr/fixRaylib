@@ -27,7 +27,7 @@ typedef struct Player {
 } Player;
 
 typedef struct EnvItem {
-    Rectangle rect;
+    rayRectangle rect;
     int blocking;
     Color color;
 } EnvItem;
@@ -133,7 +133,7 @@ int main(void)
 
                 for (int i = 0; i < envItemsLength; i++) DrawRectangleRec(envItems[i].rect, envItems[i].color);
 
-                Rectangle playerRect = { player.position.x - 20, player.position.y - 40, 40.0f, 40.0f };
+                rayRectangle playerRect = {player.position.x - 20, player.position.y - 40, 40.0f, 40.0f };
                 DrawRectangleRec(playerRect, RED);
                 
                 DrawCircleV(player.position, 5.0f, GOLD);
