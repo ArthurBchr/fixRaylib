@@ -116,7 +116,7 @@ int main(void)
     UnloadModel(model);     // Unload model data
     UnloadTexture(texture); // Unload texture data
 
-    CloseWindow();          // Close window and OpenGL context
+    rayCloseWindow();          // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
 
     return 0;

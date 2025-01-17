@@ -105,7 +105,7 @@ int main(void)
     // De-Initialization
     //--------------------------------------------------------------------------------------
     free(rectangles);
-    CloseWindow(); // Close window and OpenGL context
+    rayCloseWindow(); // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
 
     return 0;

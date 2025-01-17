@@ -112,7 +112,7 @@ int main(void)
     UnloadModel(characterModel);    // Unload model and meshes/material
     UnloadShader(skinningShader);   // Unload GPU skinning shader
     
-    CloseWindow();                  // Close window and OpenGL context
+    rayCloseWindow();                  // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
 
     return 0;

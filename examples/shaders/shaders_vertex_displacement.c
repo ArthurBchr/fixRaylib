@@ -112,7 +112,7 @@ int main(void)
     UnloadModel(planeModel);
     UnloadTexture(perlinNoiseMap);
 
-    CloseWindow();        // Close window and OpenGL context
+    rayCloseWindow();        // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
 
     return 0;

@@ -57,7 +57,7 @@
 #endif
 
 void rayShowCursor(void);
-void CloseWindow(void);
+void rayCloseWindow(void);
 
 #if defined(__linux__)
     #define _INPUT_EVENT_CODES_H
@@ -72,7 +72,7 @@ void CloseWindow(void);
 #if defined(_WIN32) || defined(_WIN64)
     #define WIN32_LEAN_AND_MEAN
 	#define Rectangle rectangle_win32
-    #define CloseWindow CloseWindow_win32
+    #define rayCloseWindow rayCloseWindow_win32
     #define rayShowCursor __imp_rayShowCursor
 	#define _APISETSTRING_
 	
@@ -95,7 +95,7 @@ void CloseWindow(void);
 #if defined(_WIN32) || defined(_WIN64)
     #undef DrawText
     #undef rayShowCursor
-    #undef CloseWindow
+    #undef rayCloseWindow
     #undef Rectangle
 
 	#undef MAX_PATH

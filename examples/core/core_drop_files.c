@@ -99,7 +99,7 @@ int main(void)
         RL_FREE(filePaths[i]); // Free allocated memory for all filepaths
     }
 
-    CloseWindow();          // Close window and OpenGL context
+    rayCloseWindow();          // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
 
     return 0;

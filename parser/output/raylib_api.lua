@@ -3133,7 +3133,7 @@ return {
       }
     },
     {
-      name = "CloseWindow",
+      name = "rayCloseWindow",
       description = "Close window and unload OpenGL context",
       returnType = "void"
     },

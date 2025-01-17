@@ -106,7 +106,7 @@ int main(void)
     //--------------------------------------------------------------------------------------
     UnloadTexture(bill);        // Unload texture
 
-    CloseWindow();              // Close window and OpenGL context
+    rayCloseWindow();              // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
 
     return 0;

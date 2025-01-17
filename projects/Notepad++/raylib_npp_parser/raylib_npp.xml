@@ -10,7 +10,7 @@
                 <Param name="const char *title" />
             </Overload>
         </KeyWord>
-        <KeyWord name="CloseWindow" func="yes">
+        <KeyWord name="rayCloseWindow" func="yes">
             <Overload retVal="void" descr="Close window and unload OpenGL context"></Overload>
         </KeyWord>
         <KeyWord name="WindowShouldClose" func="yes">

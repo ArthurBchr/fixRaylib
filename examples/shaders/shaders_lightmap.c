@@ -167,7 +167,7 @@ int main(void)
     UnloadTexture(texture); // Unload texture
     UnloadTexture(light);   // Unload texture
 
-    CloseWindow();          // Close window and OpenGL context
+    rayCloseWindow();          // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
 
     return 0;

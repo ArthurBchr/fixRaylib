@@ -123,7 +123,7 @@ int main(void)
     UnloadTexture(catSobelTexture);
     UnloadTexture(catSharpendTexture);
 
-    CloseWindow();                // Close window and OpenGL context
+    rayCloseWindow();                // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
 
     return 0;
