@@ -1149,12 +1149,12 @@ Image GetClipboardImage(void)
 }
 
 // Show mouse cursor
-void ShowCursor(void)
+void rayShowCursor(void)
 {
 #if defined(PLATFORM_DESKTOP_SDL3)
-    SDL_ShowCursor();
+    SDL_rayShowCursor();
 #else
-    SDL_ShowCursor(SDL_ENABLE);
+    SDL_rayShowCursor(SDL_ENABLE);
 #endif
     CORE.Input.Mouse.cursorHidden = false;
 }
@@ -1165,7 +1165,7 @@ void HideCursor(void)
 #if defined(PLATFORM_DESKTOP_SDL3)
     SDL_HideCursor();
 #else
-    SDL_ShowCursor(SDL_DISABLE);
+    SDL_rayShowCursor(SDL_DISABLE);
 #endif
     CORE.Input.Mouse.cursorHidden = true;
 }
@@ -1176,10 +1176,10 @@ void EnableCursor(void)
     SDL_SetRelativeMouseMode(SDL_FALSE);
 
 #if defined(PLATFORM_DESKTOP_SDL3)
-    // SDL_ShowCursor() has been split into three functions: SDL_ShowCursor(), SDL_HideCursor(), and SDL_CursorVisible()
-    SDL_ShowCursor();
+    // SDL_rayShowCursor() has been split into three functions: SDL_rayShowCursor(), SDL_HideCursor(), and SDL_CursorVisible()
+    SDL_rayShowCursor();
 #else
-    SDL_ShowCursor(SDL_ENABLE);
+    SDL_rayShowCursor(SDL_ENABLE);
 #endif
 
     platform.cursorRelative = false;

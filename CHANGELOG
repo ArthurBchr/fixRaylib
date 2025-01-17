@@ -72,7 +72,7 @@ WIP: Last update with commit from 02-Nov-2024
 [rcore][Web] REVIEWED: Update `SetWindowState()` and `ClearWindowState()` to handle `FLAG_WINDOW_MAXIMIZED` (#4402) by @Asdqwe
 [rcore][Web] REVIEWED: `WindowSizeCallback()`, do not try to handle DPI, already managed by GLFW (#4143) by @SuperUserNameMan
 [rcore][Web] REVIEWED: Relative mouse mode issues (#3940) by @Cemal Gönültaş
-[rcore][Web] REVIEWED: `ShowCursor()`, `HideCursor()` and `SetMouseCursor()` (#3647) by @ubkp
+[rcore][Web] REVIEWED: `rayShowCursor()`, `HideCursor()` and `SetMouseCursor()` (#3647) by @ubkp
 [rcore][Web] REVIEWED: Fix CORE.Input.Mouse.cursorHidden with callbacks (#3644) by @ubkp
 [rcore][Web] REVIEWED: Fix `IsMouseButtonUp()` (#3611) by @ubkp
 [rcore][Web] REVIEWED: HighDPI support #3372 by @Ray
@@ -2355,7 +2355,7 @@ other changes:
 [rlgl] Added check for OpenGL supported extensions
 [rlgl] Added function SetBlenMode() to select some predefined blending modes
 [core] Added support for drop&drag of external files into running program
-[core] Added functions ShowCursor(), HideCursor(), IsCursorHidden()
+[core] Added functions rayShowCursor(), HideCursor(), IsCursorHidden()
 [core] Renamed function SetFlags() to SetConfigFlags()
 [shapes] Simplified some functions to improve performance
 [textures] Review of Image struct to support multiple data formats

@@ -3438,7 +3438,7 @@ return {
       returnType = "void"
     },
     {
-      name = "ShowCursor",
+      name = "rayShowCursor",
       description = "Shows cursor",
       returnType = "void"
     },

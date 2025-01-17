@@ -8615,7 +8615,7 @@ void RGFW_window_showMouse(RGFW_window* win, i8 show) {
 	RGFW_UNUSED(win);
 
 	if (show) {
-		CGDisplayShowCursor(kCGDirectMainDisplay);
+		CGDisplayrayShowCursor(kCGDirectMainDisplay);
 	}
 	else {
 		CGDisplayHideCursor(kCGDirectMainDisplay);
@@ -8633,7 +8633,7 @@ b32 RGFW_window_setMouseStandard(RGFW_window* win, u8 stdMouses) {
 		return 0;
 
 	RGFW_UNUSED(win);
-	CGDisplayShowCursor(kCGDirectMainDisplay);
+	CGDisplayrayShowCursor(kCGDirectMainDisplay);
 	objc_msgSend_void(mouse, sel_registerName("set"));
 
 	return 1;

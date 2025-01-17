@@ -56,7 +56,7 @@
     #define RGFW_OPENGL_ES2
 #endif
 
-void ShowCursor(void);
+void rayShowCursor(void);
 void CloseWindow(void);
 
 #if defined(__linux__)
@@ -73,7 +73,7 @@ void CloseWindow(void);
     #define WIN32_LEAN_AND_MEAN
 	#define Rectangle rectangle_win32
     #define CloseWindow CloseWindow_win32
-    #define ShowCursor __imp_ShowCursor
+    #define rayShowCursor __imp_rayShowCursor
 	#define _APISETSTRING_
 	
 	#undef MAX_PATH
@@ -94,7 +94,7 @@ void CloseWindow(void);
 
 #if defined(_WIN32) || defined(_WIN64)
     #undef DrawText
-    #undef ShowCursor
+    #undef rayShowCursor
     #undef CloseWindow
     #undef Rectangle
 
@@ -710,7 +710,7 @@ Image GetClipboardImage(void)
 }
 
 // Show mouse cursor
-void ShowCursor(void)
+void rayShowCursor(void)
 {
     RGFW_window_showMouse(platform.window, true);
     CORE.Input.Mouse.cursorHidden = false;

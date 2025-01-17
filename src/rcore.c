@@ -602,7 +602,7 @@ const char *TextFormat(const char *text, ...);              // Formatting of tex
 //void SetClipboardText(const char *text)
 //const char *GetClipboardText(void)
 
-//void ShowCursor(void)
+//void rayShowCursor(void)
 //void HideCursor(void)
 //void EnableCursor(void)
 //void DisableCursor(void)

@@ -46,7 +46,7 @@ int main(void)
             }
             else
             {
-                ShowCursor();
+                rayShowCursor();
                 isCursorHidden = 0;
             }
         }

@@ -822,7 +822,7 @@ Image GetClipboardImage(void)
 }
 
 // Show mouse cursor
-void ShowCursor(void)
+void rayShowCursor(void)
 {
     if (CORE.Input.Mouse.cursorHidden)
     {

@@ -303,7 +303,7 @@ Image GetClipboardImage(void)
 }
 
 // Show mouse cursor
-void ShowCursor(void)
+void rayShowCursor(void)
 {
     CORE.Input.Mouse.cursorHidden = false;
 }
